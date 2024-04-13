@@ -1,0 +1,3 @@
+app_package_id = "io.ct2.sawtooth_blender"
+title = "Sawtooth Blender Test"
+asset_dir = "./assets"

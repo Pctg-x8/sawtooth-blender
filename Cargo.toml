@@ -1,0 +1,21 @@
+[package]
+name = "sawtooth-blender"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+debug = ["bedrock/VK_EXT_debug_utils", "peridot/debug"]
+
+[dependencies]
+peridot = { path = "../peridot/base", features = ["derive"] }
+peridot-command-object = { path = "../peridot/modules/command-object", features = [
+    "memory-manager-interop",
+] }
+peridot-memory-manager = { path = "../peridot/modules/memory-manager" }
+peridot-vertex-processing-pack = { path = "../peridot/modules/vertex-processing-pack" }
+rand = "*"
+
+[dependencies.bedrock]
+git = "https://github.com/Pctg-x8/bedrock"
+branch = "peridot"
+features = ["Implements"]
